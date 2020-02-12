@@ -1,0 +1,401 @@
+[2020-02-07 16:43:35] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1071 La clé est trop longue. Longueur maximale: 1000 (SQL: alter table `users` add unique `users_email_unique`(`email`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 La clé est trop longue. Longueur maximale: 1000 (SQL: alter table `users` add unique `users_email_unique`(`email`)) at C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:669)
+[stacktrace]
+#0 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('alter table `us...', Array, Object(Closure))
+#1 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(464): Illuminate\\Database\\Connection->run('alter table `us...', Array, Object(Closure))
+#2 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(97): Illuminate\\Database\\Connection->statement('alter table `us...')
+#3 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(290): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(167): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('users', Object(Closure))
+#6 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\database\\migrations\\2014_10_12_000000_create_users_table.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(392): CreateUsersTable->up()
+#8 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(401): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(200): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateUsersTable), 'up')
+#10 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(165): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\wamp64\\\\www\\\\l...', 1, false)
+#11 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(110): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(71): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#15 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#17 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#18 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#19 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(173): Illuminate\\Container\\Container->call(Array)
+#20 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(160): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#22 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(1012): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 {main}
+
+[previous exception] [object] (PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 La clé est trop longue. Longueur maximale: 1000 at C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:463)
+[stacktrace]
+#0 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(463): PDOStatement->execute()
+#1 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(662): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('alter table `us...', Array)
+#2 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('alter table `us...', Array, Object(Closure))
+#3 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(464): Illuminate\\Database\\Connection->run('alter table `us...', Array, Object(Closure))
+#4 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(97): Illuminate\\Database\\Connection->statement('alter table `us...')
+#5 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(290): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(167): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('users', Object(Closure))
+#8 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\database\\migrations\\2014_10_12_000000_create_users_table.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#9 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(392): CreateUsersTable->up()
+#10 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(401): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#11 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(200): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateUsersTable), 'up')
+#12 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(165): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\wamp64\\\\www\\\\l...', 1, false)
+#13 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(110): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#14 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(71): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#15 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#16 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#17 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(173): Illuminate\\Container\\Container->call(Array)
+#22 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(160): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(1012): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+"} 
+[2020-02-07 16:56:23] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 La table 'users' existe déjà (SQL: create table `users` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(191) not null, `email` varchar(191) not null, `email_verified_at` timestamp null, `password` varchar(191) not null, `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 La table 'users' existe déjà (SQL: create table `users` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(191) not null, `email` varchar(191) not null, `email_verified_at` timestamp null, `password` varchar(191) not null, `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:669)
+[stacktrace]
+#0 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('create table `u...', Array, Object(Closure))
+#1 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(464): Illuminate\\Database\\Connection->run('create table `u...', Array, Object(Closure))
+#2 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(97): Illuminate\\Database\\Connection->statement('create table `u...')
+#3 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(290): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(167): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('users', Object(Closure))
+#6 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\database\\migrations\\2014_10_12_000000_create_users_table.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(392): CreateUsersTable->up()
+#8 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(401): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(200): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateUsersTable), 'up')
+#10 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(165): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\wamp64\\\\www\\\\l...', 1, false)
+#11 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(110): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(71): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#15 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#17 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#18 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#19 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(173): Illuminate\\Container\\Container->call(Array)
+#20 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(160): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#22 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(1012): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 {main}
+
+[previous exception] [object] (PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 La table 'users' existe déjà at C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:463)
+[stacktrace]
+#0 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(463): PDOStatement->execute()
+#1 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(662): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('create table `u...', Array)
+#2 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('create table `u...', Array, Object(Closure))
+#3 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(464): Illuminate\\Database\\Connection->run('create table `u...', Array, Object(Closure))
+#4 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(97): Illuminate\\Database\\Connection->statement('create table `u...')
+#5 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(290): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(167): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('users', Object(Closure))
+#8 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\database\\migrations\\2014_10_12_000000_create_users_table.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#9 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(392): CreateUsersTable->up()
+#10 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(401): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#11 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(200): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateUsersTable), 'up')
+#12 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(165): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\wamp64\\\\www\\\\l...', 1, false)
+#13 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(110): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#14 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(71): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#15 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#16 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#17 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(173): Illuminate\\Container\\Container->call(Array)
+#22 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(160): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(1012): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+"} 
+[2020-02-07 17:06:14] local.ERROR: Command "make:migrate" is not defined.
+
+Did you mean one of these?
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:migrate\" is not defined.
+
+Did you mean one of these?
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test at C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php:670)
+[stacktrace]
+#0 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(236): Symfony\\Component\\Console\\Application->find('make:migrate')
+#1 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2020-02-07 17:13:34] local.ERROR: syntax error, unexpected '/', expecting function (T_FUNCTION) or const (T_CONST) {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '/', expecting function (T_FUNCTION) or const (T_CONST) at C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\database\\migrations\\2020_02_07_170659_contacts.php:9)
+[stacktrace]
+#0 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(482): Illuminate\\Filesystem\\Filesystem->requireOnce('C:\\\\wamp64\\\\www\\\\l...')
+#1 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(104): Illuminate\\Database\\Migrations\\Migrator->requireFiles(Array)
+#2 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(71): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#3 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#4 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#5 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#6 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#7 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#8 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#9 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(173): Illuminate\\Container\\Container->call(Array)
+#10 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#11 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(160): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#12 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(1012): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 {main}
+"} 
+[2020-02-07 17:14:44] local.ERROR: syntax error, unexpected '/', expecting function (T_FUNCTION) or const (T_CONST) {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '/', expecting function (T_FUNCTION) or const (T_CONST) at C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\database\\migrations\\2020_02_07_170659_contacts.php:9)
+[stacktrace]
+#0 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(482): Illuminate\\Filesystem\\Filesystem->requireOnce('C:\\\\wamp64\\\\www\\\\l...')
+#1 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(104): Illuminate\\Database\\Migrations\\Migrator->requireFiles(Array)
+#2 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(71): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#3 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#4 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#5 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#6 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#7 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#8 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#9 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(173): Illuminate\\Container\\Container->call(Array)
+#10 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#11 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(160): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#12 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(1012): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 {main}
+"} 
+[2020-02-07 17:32:41] local.ERROR: syntax error, unexpected '(' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '(' at C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\app\\User.php:42)
+[stacktrace]
+#0 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\composer\\ClassLoader.php(322): Composer\\Autoload\\includeFile('C:\\\\wamp64\\\\www\\\\l...')
+#1 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('App\\\\User')
+#2 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\FactoryBuilder.php(241): spl_autoload_call('App\\\\User')
+#3 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\FactoryBuilder.php(178): Illuminate\\Database\\Eloquent\\FactoryBuilder->make(Array)
+#4 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\database\\seeds\\DatabaseSeeder.php(12): Illuminate\\Database\\Eloquent\\FactoryBuilder->create()
+#5 [internal function]: DatabaseSeeder->run()
+#6 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#7 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#9 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#10 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#11 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(134): Illuminate\\Container\\Container->call(Array)
+#12 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(63): Illuminate\\Database\\Seeder->__invoke()
+#13 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns\\GuardsAttributes.php(122): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#14 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(64): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#15 [internal function]: Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#16 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#17 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(173): Illuminate\\Container\\Container->call(Array)
+#22 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(160): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(1012): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+"} 
+[2020-02-07 17:34:41] local.ERROR: Call to undefined method App\User::contacts() {"exception":"[object] (BadMethodCallException(code: 0): Call to undefined method App\\User::contacts() at C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php:50)
+[stacktrace]
+#0 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(36): Illuminate\\Database\\Eloquent\\Model::throwBadMethodCallException('contacts')
+#1 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1620): Illuminate\\Database\\Eloquent\\Model->forwardCallTo(Object(Illuminate\\Database\\Eloquent\\Builder), 'contacts', Array)
+#2 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\database\\seeds\\DatabaseSeeder.php(13): Illuminate\\Database\\Eloquent\\Model->__call('contacts', Array)
+#3 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\EnumeratesValues.php(176): DatabaseSeeder->{closure}(Object(App\\User), 0)
+#4 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\database\\seeds\\DatabaseSeeder.php(14): Illuminate\\Support\\Collection->each(Object(Closure))
+#5 [internal function]: DatabaseSeeder->run()
+#6 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#7 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#9 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#10 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#11 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(134): Illuminate\\Container\\Container->call(Array)
+#12 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(63): Illuminate\\Database\\Seeder->__invoke()
+#13 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns\\GuardsAttributes.php(122): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#14 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(64): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#15 [internal function]: Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#16 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#17 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(173): Illuminate\\Container\\Container->call(Array)
+#22 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(160): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(1012): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+"} 
+[2020-02-07 17:35:13] local.ERROR: Call to undefined method App\User::contacts() {"exception":"[object] (BadMethodCallException(code: 0): Call to undefined method App\\User::contacts() at C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php:50)
+[stacktrace]
+#0 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(36): Illuminate\\Database\\Eloquent\\Model::throwBadMethodCallException('contacts')
+#1 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1620): Illuminate\\Database\\Eloquent\\Model->forwardCallTo(Object(Illuminate\\Database\\Eloquent\\Builder), 'contacts', Array)
+#2 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\database\\seeds\\DatabaseSeeder.php(13): Illuminate\\Database\\Eloquent\\Model->__call('contacts', Array)
+#3 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\EnumeratesValues.php(176): DatabaseSeeder->{closure}(Object(App\\User), 0)
+#4 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\database\\seeds\\DatabaseSeeder.php(14): Illuminate\\Support\\Collection->each(Object(Closure))
+#5 [internal function]: DatabaseSeeder->run()
+#6 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#7 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#9 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#10 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#11 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(134): Illuminate\\Container\\Container->call(Array)
+#12 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(63): Illuminate\\Database\\Seeder->__invoke()
+#13 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns\\GuardsAttributes.php(122): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#14 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(64): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#15 [internal function]: Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#16 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#17 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(173): Illuminate\\Container\\Container->call(Array)
+#22 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(160): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(1012): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+"} 
+[2020-02-07 17:39:25] local.ERROR: Call to undefined method App\User::contacts() {"exception":"[object] (BadMethodCallException(code: 0): Call to undefined method App\\User::contacts() at C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php:50)
+[stacktrace]
+#0 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(36): Illuminate\\Database\\Eloquent\\Model::throwBadMethodCallException('contacts')
+#1 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1620): Illuminate\\Database\\Eloquent\\Model->forwardCallTo(Object(Illuminate\\Database\\Eloquent\\Builder), 'contacts', Array)
+#2 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\database\\seeds\\DatabaseSeeder.php(13): Illuminate\\Database\\Eloquent\\Model->__call('contacts', Array)
+#3 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\EnumeratesValues.php(176): DatabaseSeeder->{closure}(Object(App\\User), 0)
+#4 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\database\\seeds\\DatabaseSeeder.php(14): Illuminate\\Support\\Collection->each(Object(Closure))
+#5 [internal function]: DatabaseSeeder->run()
+#6 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#7 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#9 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#10 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#11 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(134): Illuminate\\Container\\Container->call(Array)
+#12 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(63): Illuminate\\Database\\Seeder->__invoke()
+#13 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns\\GuardsAttributes.php(122): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#14 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(64): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#15 [internal function]: Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#16 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#17 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(173): Illuminate\\Container\\Container->call(Array)
+#22 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(160): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(1012): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+"} 
+[2020-02-07 17:46:09] local.ERROR: Call to undefined method App\User::contacts() {"exception":"[object] (BadMethodCallException(code: 0): Call to undefined method App\\User::contacts() at C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php:50)
+[stacktrace]
+#0 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(36): Illuminate\\Database\\Eloquent\\Model::throwBadMethodCallException('contacts')
+#1 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1620): Illuminate\\Database\\Eloquent\\Model->forwardCallTo(Object(Illuminate\\Database\\Eloquent\\Builder), 'contacts', Array)
+#2 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\database\\seeds\\DatabaseSeeder.php(13): Illuminate\\Database\\Eloquent\\Model->__call('contacts', Array)
+#3 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\EnumeratesValues.php(176): DatabaseSeeder->{closure}(Object(App\\User), 0)
+#4 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\database\\seeds\\DatabaseSeeder.php(14): Illuminate\\Support\\Collection->each(Object(Closure))
+#5 [internal function]: DatabaseSeeder->run()
+#6 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#7 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#9 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#10 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#11 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(134): Illuminate\\Container\\Container->call(Array)
+#12 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(63): Illuminate\\Database\\Seeder->__invoke()
+#13 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns\\GuardsAttributes.php(122): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#14 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(64): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#15 [internal function]: Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#16 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#17 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(173): Illuminate\\Container\\Container->call(Array)
+#22 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(160): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(1012): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\wamp64\\www\\laravel\\IIM-A2-laravel-contact-list-exo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+"} 
